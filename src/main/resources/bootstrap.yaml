@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: integration
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+ribbon:
+  http:
+    client:
+      enabled: true
