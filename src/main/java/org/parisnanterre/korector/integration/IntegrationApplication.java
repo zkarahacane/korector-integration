@@ -10,15 +10,6 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 public class IntegrationApplication {
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
-	@Bean("ribbon-template")
-	@LoadBalanced
-	public RestTemplate restTemplateWithRibbon() {
-		return new RestTemplate();
-	}
 	public static void main(String[] args) {
 		SpringApplication.run(IntegrationApplication.class, args);
 	}

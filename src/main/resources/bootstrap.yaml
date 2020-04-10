@@ -1,6 +1,22 @@
 spring:
   application:
     name: integration
+  profiles:
+    active: dev
+---
+spring:
+  profiles: "dev"
+  cloud:
+    config:
+      discovery:
+        enabled: false
+eureka:
+  client:
+    enabled: false
+
+---
+spring:
+  profiles: "prod"
   cloud:
     config:
       discovery:

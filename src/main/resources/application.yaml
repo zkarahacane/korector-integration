@@ -1,0 +1,8 @@
+spring:
+  profiles: "dev"
+server:
+  port: 8885
+teams:
+  service:
+    name: localhost:8080
+
